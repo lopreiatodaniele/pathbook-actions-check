@@ -1,0 +1,17 @@
+name: Portability practice
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  portable:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, windows-2025]
+    uses: ./.github/workflows/quality.yml
+    with:
+      runner: ${{ matrix.os }}

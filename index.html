@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Practice counter</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+    <script type="module" src="./src/main.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Practice counter</h1>
+      <p id="room">Practice room</p>
+      <p>
+        The count stays between zero and three. Each button changes it by one.
+      </p>
+      <p id="count" role="status" aria-live="polite">Count: 0</p>
+      <div id="controls" hidden>
+        <button id="add" type="button">Add one</button>
+        <button id="remove" type="button">Remove one</button>
+        <button id="reset" type="button">Reset count</button>
+      </div>
+      <p>
+        Without JavaScript this explanation remains readable; the controls
+        require enhancement.
+      </p>
+    </main>
+  </body>
+</html>

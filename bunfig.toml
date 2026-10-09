@@ -1,0 +1,2 @@
+# Let Vite own mode-aware .env loading.
+env = false

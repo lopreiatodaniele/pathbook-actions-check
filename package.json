@@ -1,0 +1,32 @@
+{
+  "name": "pathbook-actions-workflow",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "bun@1.4.2",
+  "engines": {
+    "node": ">=24",
+    "bun": ">=1.4.2"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 4190 --strictPort",
+    "build": "vite build --base=./ && node scripts/write-build-info.mjs",
+    "preview": "vite preview --host 127.0.0.1 --port 4191 --strictPort",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:browser": "playwright test",
+    "check": "bun run format:check && bun run lint && bun run test && bun run build"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.64.0",
+    "eslint": "10.12.0",
+    "globals": "17.13.0",
+    "prettier": "3.9.9",
+    "vite": "8.3.4",
+    "vitest": "5.0.3"
+  }
+}

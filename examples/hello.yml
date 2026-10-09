@@ -1,0 +1,12 @@
+name: Runner introduction
+on:
+  workflow_dispatch:
+permissions: {}
+jobs:
+  inspect:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Read a tool version
+        run: git --version
+      - name: Read the working directory
+        run: pwd
