@@ -8,5 +8,5 @@ export function nextCount(count, delta, limit = 3) {
   if (delta !== 1 && delta !== -1) {
     throw new RangeError("delta must be 1 or -1");
   }
-  return Math.max(0, count + delta);
+  return Math.min(limit, Math.max(0, count + delta));
 }
